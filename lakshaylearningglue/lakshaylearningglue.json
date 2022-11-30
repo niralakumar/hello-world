@@ -1,0 +1,33 @@
+{
+  "name" : "lakshaylearningglue",
+  "description" : "",
+  "role" : "arn:aws:iam::311778411820:role/Admin_glue",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 1
+  },
+  "command" : {
+    "name" : "glueetl",
+    "scriptLocation" : "s3://aws-glue-scripts-311778411820-ap-south-1/lakshaysethia@aesl.in/lakshaylearningglue",
+    "pythonVersion" : "3"
+  },
+  "defaultArguments" : {
+    "--job-bookmark-option" : "job-bookmark-disable",
+    "--enable-job-insights" : "false",
+    "--job-language" : "python",
+    "--TempDir" : "s3://aws-glue-temporary-311778411820-ap-south-1/lakshaysethia@aesl.in"
+  },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 10,
+  "timeout" : 2880,
+  "maxCapacity" : 10.0,
+  "glueVersion" : "2.0",
+  "numberOfWorkers" : 10,
+  "workerType" : "G.1X",
+  "executionClass" : "STANDARD",
+  "sourceControlDetails" : {
+    "provider" : "GITHUB",
+    "repository" : "hello-world",
+    "branch" : "master",
+    "folder" : "lakshaylearningglue"
+  }
+}
